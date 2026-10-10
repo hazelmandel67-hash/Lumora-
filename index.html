@@ -1,1 +1,374 @@
 
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Lumora — Your Ideas. Your Universe.</title>
+
+<style>
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: -apple-system, BlinkMacSystemFont, Arial, sans-serif;
+  background: #0b0915;
+  color: #fff;
+  min-height: 100vh;
+}
+
+header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 22px 7%;
+  border-bottom: 1px solid #29243b;
+}
+
+.logo {
+  font-size: 27px;
+  font-weight: 800;
+  background: linear-gradient(90deg, #e7a5ff, #8c7cff);
+  -webkit-background-clip: text;
+  color: transparent;
+}
+
+.badge {
+  border: 1px solid #5c477f;
+  color: #dfbdff;
+  border-radius: 20px;
+  padding: 7px 12px;
+  font-size: 12px;
+}
+
+main {
+  max-width: 900px;
+  margin: auto;
+  padding: 65px 20px;
+}
+
+.hero {
+  text-align: center;
+  margin-bottom: 38px;
+}
+
+.hero h1 {
+  font-size: clamp(36px, 8vw, 64px);
+  line-height: 1.12;
+  margin-bottom: 18px;
+  letter-spacing: -2px;
+}
+
+.gradient {
+  background: linear-gradient(90deg, #f2a7ff, #a49aff, #80c9ff);
+  -webkit-background-clip: text;
+  color: transparent;
+}
+
+.hero p {
+  color: #b9b3ca;
+  line-height: 1.7;
+  max-width: 520px;
+  margin: auto;
+  font-size: 16px;
+}
+
+.card {
+  background: #151121;
+  border: 1px solid #342847;
+  border-radius: 22px;
+  padding: 25px;
+  box-shadow: 0 20px 70px #0005;
+}
+
+label {
+  display: block;
+  margin: 18px 0 10px;
+  font-weight: 600;
+  font-size: 14px;
+}
+
+select, textarea {
+  width: 100%;
+  background: #0e0b18;
+  border: 1px solid #443653;
+  border-radius: 12px;
+  padding: 15px;
+  color: white;
+  font-size: 15px;
+  outline: none;
+}
+
+textarea {
+  min-height: 125px;
+  resize: vertical;
+  line-height: 1.6;
+}
+
+textarea:focus, select:focus {
+  border-color: #bc8cff;
+}
+
+.examples {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  margin-top: 12px;
+}
+
+.example {
+  background: #251a38;
+  border: 1px solid #49345f;
+  color: #e1c9ff;
+  border-radius: 20px;
+  padding: 9px 12px;
+  font-size: 12px;
+  cursor: pointer;
+}
+
+button {
+  font-family: inherit;
+}
+
+.generate {
+  width: 100%;
+  margin-top: 22px;
+  padding: 16px;
+  border: none;
+  border-radius: 12px;
+  background: linear-gradient(100deg, #bd79f6, #7775ff);
+  color: white;
+  font-size: 16px;
+  font-weight: 700;
+  cursor: pointer;
+}
+
+.generate:active {
+  transform: scale(.99);
+}
+
+.credits {
+  color: #aaa0bd;
+  text-align: center;
+  margin-top: 14px;
+  font-size: 12px;
+}
+
+.preview {
+  display: none;
+  margin-top: 25px;
+  background: #100d1b;
+  border: 1px solid #49365f;
+  border-radius: 16px;
+  padding: 20px;
+}
+
+.preview h2 {
+  color: #dfb0ff;
+  margin-bottom: 12px;
+}
+
+.preview p {
+  color: #d1cadc;
+  line-height: 1.7;
+  overflow-wrap: anywhere;
+}
+
+.preview button {
+  margin-top: 15px;
+  background: #302044;
+  border: 1px solid #63447f;
+  border-radius: 9px;
+  padding: 11px 15px;
+  color: white;
+}
+
+.features {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+  gap: 15px;
+  margin-top: 35px;
+}
+
+.feature {
+  padding: 20px;
+  background: #151121;
+  border: 1px solid #30263f;
+  border-radius: 15px;
+}
+
+.feature span {
+  font-size: 25px;
+}
+
+.feature h3 {
+  margin: 12px 0 8px;
+  font-size: 16px;
+}
+
+.feature p {
+  color: #aaa2bb;
+  font-size: 13px;
+  line-height: 1.6;
+}
+
+footer {
+  text-align: center;
+  padding: 30px 15px;
+  color: #8e859f;
+  font-size: 12px;
+}
+
+</style>
+</head>
+
+<body>
+
+<header>
+  <div class="logo">✦ LUMORA</div>
+  <div class="badge">YOUR CREATIVE UNIVERSE</div>
+</header>
+
+<main>
+
+<section class="hero">
+  <h1>Your ideas.<br><span class="gradient">Your universe.</span></h1>
+  <p>
+    Imagine it. Describe it. Start building it.
+    Welcome to a new universe of creativity with Lumora.
+  </p>
+</section>
+
+<section class="card">
+
+  <h2>✨ What will you create?</h2>
+
+  <label for="type">Choose what you want to build</label>
+
+  <select id="type">
+    <option value="Website">Website</option>
+    <option value="Mobile app">Mobile app</option>
+    <option value="Online store">Online store</option>
+    <option value="Game">Game</option>
+    <option value="Study tool">Study tool</option>
+    <option value="Other project">Something else</option>
+  </select>
+
+  <label for="idea">Describe your idea</label>
+
+  <textarea id="idea" placeholder="I want to create an app that helps people organise their daily lives..."></textarea>
+
+  <div class="examples">
+    <button class="example" onclick="example('A fashion store with product cards and a shopping cart.')">👗 Fashion store</button>
+    <button class="example" onclick="example('A study planner with subjects, tasks and a daily timetable.')">📚 Study planner</button>
+    <button class="example" onclick="example('A colourful storytelling website for children.')">🌈 Story creator</button>
+  </div>
+
+  <button class="generate" onclick="buildProject()">
+    ✨ Create My Project
+  </button>
+
+  <p class="credits" id="credits">6 free demo credits available on this device</p>
+
+  <div class="preview" id="preview">
+    <h2 id="resultTitle">Your project</h2>
+    <p id="resultText"></p>
+    <button onclick="resetProject()">← Create another project</button>
+  </div>
+
+</section>
+
+<section class="features">
+
+  <div class="feature">
+    <span>🎨</span>
+    <h3>Bring ideas to life</h3>
+    <p>Start with your imagination and describe what you want to create.</p>
+  </div>
+
+  <div class="feature">
+    <span>📱</span>
+    <h3>Explore possibilities</h3>
+    <p>Plan websites, apps, games and online stores in one place.</p>
+  </div>
+
+  <div class="feature">
+    <span>🚀</span>
+    <h3>Build your future</h3>
+    <p>Turn your ideas into projects and keep developing your vision.</p>
+  </div>
+
+</section>
+
+</main>
+
+<footer>
+  © 2026 Lumora · Your ideas. Your universe.<br><br>
+  Early prototype · AI generation is not connected yet.
+</footer>
+
+<script>
+let credits = Number(localStorage.getItem("lumoraCredits"));
+
+if (!Number.isFinite(credits) || credits < 0 || credits > 6) {
+  credits = 6;
+  localStorage.setItem("lumoraCredits", credits);
+}
+
+function updateCredits() {
+  document.getElementById("credits").textContent =
+    credits + " free demo credits available on this device";
+}
+
+function example(text) {
+  document.getElementById("idea").value = text;
+}
+
+function buildProject() {
+  const type = document.getElementById("type").value;
+  const idea = document.getElementById("idea").value.trim();
+
+  if (!idea) {
+    alert("Please describe your idea first! 💜");
+    return;
+  }
+
+  if (credits <= 0) {
+    alert("You've used your 6 demo credits on this device. Paid plans are not connected yet.");
+    return;
+  }
+
+  credits--;
+  localStorage.setItem("lumoraCredits", credits);
+
+  document.getElementById("resultTitle").textContent =
+    "✨ Your " + type + " concept";
+
+  document.getElementById("resultText").textContent =
+    "Your idea: " + idea +
+    "\n\nYour project concept has been recorded in this demo. " +
+    "The next development stage is connecting an AI service to generate " +
+    "real project code and interactive previews.";
+
+  document.getElementById("preview").style.display = "block";
+  updateCredits();
+
+  document.getElementById("preview").scrollIntoView({
+    behavior: "smooth",
+    block: "nearest"
+  });
+}
+
+function resetProject() {
+  document.getElementById("preview").style.display = "none";
+  document.getElementById("idea").value = "";
+}
+
+updateCredits();
+</script>
+
+</body>
+</html>
